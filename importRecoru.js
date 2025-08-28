@@ -8,7 +8,7 @@ async function login(page) {
   await page.type("#contractId", process.env.RECORU_CONTRACTID);
   await page.type("#authId", process.env.RECORU_USER);
   await page.type("#password", process.env.RECORU_PASS);
-  //await page.click("#submit");
+  await page.click('input[type="button"]');
   //await page.waitForNavigation();
 }
 
@@ -38,7 +38,7 @@ async function main() {
   //  await uploadFile(page, path.join(dir, file));
   //}
 
-  await browser.close();
+  //await browser.close();
 }
 
 main();
